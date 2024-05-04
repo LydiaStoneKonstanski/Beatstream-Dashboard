@@ -5,18 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 500);
 });
 
-const headers = {
-    headers: {'Content-Type': 'application/json'}
-}
-
-function floatchart() {
-fetch("/api/graphdata", {
-        method: "GET",
-        headers: headers
-        }).then(response => response.json())
-        .then(data => {
-        (function () {
-    var options = {
+var sparkline_options = {
       chart: {
         type: 'line',
         height: 90,
@@ -33,10 +22,6 @@ fetch("/api/graphdata", {
         width: 3
       },
       series: [
-        {
-          name: 'series1',
-          data: data
-        }
       ],
       yaxis: {
         min: 5,
@@ -62,11 +47,32 @@ fetch("/api/graphdata", {
         }
       }
     };
-    var chart = new ApexCharts(document.querySelector('#tab-chart-1'), options);
-    chart.render();
-  })();
-                    });
-                    (function () {
+
+function apiget(api_url){
+    const headers = {
+        headers: {'Content-Type': 'application/json'}
+    }
+    return fetch("/api/"+api_url, {
+        method: "GET",
+        headers: headers
+        }).then(response => response.json())
+}
+
+
+function floatchart() {
+    apiget('graphdata').then(data => {
+        (function () {
+        var options = sparkline_options;
+        options['series'] = [
+        {
+          name: 'series1',
+          data: data
+        }];
+        var chart = new ApexCharts(document.querySelector('#tab-chart-1'), options);
+        chart.render();
+        })();
+         });
+    (function () {
     var options = {
       chart: {
         type: 'line',
