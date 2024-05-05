@@ -12,9 +12,11 @@ from importlib import import_module
 
 from flask_cdn import CDN
 
+
 db = SQLAlchemy()
 login_manager = LoginManager()
 cdn = CDN()
+
 
 def register_extensions(app):
     db.init_app(app)

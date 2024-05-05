@@ -42,10 +42,8 @@ class BeatstreamConnection():
             raise NotImplementedError
 
         Base.metadata.create_all(self.engine)
-        self.session = Session(bind=self.engine)
 
+    def new_session(self):
+        return Session(bind=self.engine)
 
-if __name__ == "__main__":
-    b = BeatstreamConnection()
-    s = b.session
 

@@ -8,6 +8,10 @@ from flask import render_template, request
 from flask_login import login_required
 from jinja2 import TemplateNotFound
 
+from .plots import PlotCreator
+
+plot_creator = PlotCreator()
+
 @blueprint.route('/index')
 @login_required
 def index():
@@ -31,7 +35,8 @@ def icon_tabler():
 @blueprint.route('/sample-page')
 @login_required
 def sample_page():
-    return render_template('pages/sample-page.html')  
+    bar = plot_creator.create_total_model_score_chart()
+    return render_template('pages/sample-page.html', plot=bar)
 
 @blueprint.route('/accounts/password-reset/')
 def password_reset():

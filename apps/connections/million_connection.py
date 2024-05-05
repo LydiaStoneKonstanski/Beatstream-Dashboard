@@ -81,15 +81,8 @@ class Similarity(Base):
         self.index = index
         self.target = target
         self.similar = similar
-"""
-('CREATE TABLE tracks(\n  track_id TEXT,\n  title TEXT,\n  
-artist_name TEXT,\n  "release" TEXT,\n  year INT,\n  
-duration REAL,\n  song_hotttnesss REAL,\n  artist_hotttnesss REAL,\n  
-artist_familiarity REAL,\n  artist_location TEXT,\n  artist_latitude REAL,\n  
-artist_longitude REAL,\n  song_id TEXT,\n  artist_id TEXT,\n  
-track_7digitalid INT,\n  artist_7digitalid INT,\n  release_7digitalid INT,\n  
-artist_mbid TEXT\n)',)
-"""
+
+
 class Track(Base):
     __tablename__ = 'tracks'
     index = Column(Integer, primary_key=True)
@@ -150,10 +143,8 @@ class MillionConnection():
             raise NotImplementedError
 
         Base.metadata.create_all(self.engine)
-        self.session = Session(bind=self.engine)
 
+    def new_session(self):
+        return Session(bind=self.engine)
 
-if __name__ == "__main__":
-    m = MillionConnection()
-    s = m.session
 
