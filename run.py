@@ -13,7 +13,7 @@ from apps import create_app, db
 
 # WARNING: Don't run with debug turned on in production!
 DEBUG = (os.getenv('DEBUG', 'False') == 'True')
-# TODO Set this as False once before final project finished
+# TODO Set this as False before final project finished
 #DEBUG = True
 
 # The configuration
