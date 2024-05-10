@@ -417,15 +417,13 @@
             <div class="card-body">
               <div class="row mb-3 align-items-center">
                 <div class="col">
-                  <small>Total Growth</small>
-                  <h3>$2,324.00</h3>
+                  <small>Total Users</small>
+                  <h3>{{ total_users }}</h3>
+
                 </div>
                 <div class="col-auto">
-                  <select class="form-select p-r-35">
-                    <option>Today</option>
-                    <option selected>This Month</option>
-                    <option>This Year</option>
-                  </select>
+                  <small>Active Users</small>
+                  <h3>{{ active_users }}</h3>
                 </div>
               </div>
               <div id="growthchart"></div>

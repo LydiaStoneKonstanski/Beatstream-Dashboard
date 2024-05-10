@@ -119,6 +119,13 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000000;
 
+$bsteal-000: #f5f5f5;
+$bsteal-100: #cae4e7;
+
+$bsteal-300: #87c4ca;
+
+$bsbrown-200: #ffca97
+$bsbrown-500: #7f3600;
 
 // Assign Main Theme Color
 $blue: $blue-500; 
@@ -151,8 +158,8 @@ $colors: (
 );
 // scss-docs-end colors-map
 
-$primary: $blue; // change
-$secondary: $indigo; // change
+$primary: $teal; // change
+$secondary: $orange; // change
 $success: $green; // change
 $info: $cyan; // change
 $warning: $yellow; // change
@@ -389,7 +396,7 @@ $position-values: (
 // Body
 //
 // Settings for the `<body>` element.
-$body-bg: #eceff1; // change
+$body-bg: #ffe4ca; // change
 $body-color: $gray-900; // change
 $body-text-align: null;
 
