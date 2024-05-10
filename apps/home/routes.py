@@ -10,12 +10,20 @@ from jinja2 import TemplateNotFound
 
 from .plots import PlotCreator
 
+from ..connections.beatstream_connection import BeatstreamConnection, User, Recommendation
+from sqlalchemy import func
+beatstream_connection = BeatstreamConnection()
+beatstream_session = beatstream_connection.new_session()
+
 plot_creator = PlotCreator()
 
 @blueprint.route('/index')
 @login_required
 def index():
-    return render_template('pages/index.html', segment='index')
+    total_users = f"{beatstream_session.query(func.count(User.id)).first()[0]:,}"
+    active_users = f"{beatstream_session.query(func.count(User.id)).filter(User.current_song != "None").first()[0]:,}"
+
+    return render_template('pages/index.html', segment='index', total_users=total_users, active_users=active_users)
 
 @blueprint.route('/typography')
 @login_required

@@ -47,3 +47,11 @@ class ModelScores(Resource):
             'categories': list(model_scores.keys())
         }
         return jsonify(data)
+
+@api.route("/totalusers")
+class TotalUsers(Resource):
+    def get(self):
+        results = beatstream_session.query(func.count(User.id)).all()
+        print (results)
+        results = beatstream_session.query(func.count(User.id)).filter(User.current_song != None).all()
+        print (results)
