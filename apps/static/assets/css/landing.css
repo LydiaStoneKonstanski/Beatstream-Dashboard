@@ -1,0 +1,111 @@
+/**======================================================================
+=========================================================================
+Template Name: Berry - Bootstrap Admin Template
+Author: codedthemes
+Support: https://codedthemes.authordesk.app
+File: style.css
+=========================================================================
+=================================================================================== */
+body {
+  font-feature-settings: "salt";
+}
+
+:root {
+  --bs-body-bg: #eceff1;
+  --bs-body-bg-rgb: 236, 239, 241;
+  --pc-heading-color: #343a40;
+  --pc-active-background: #e9ecef;
+  --pc-sidebar-background: #fff;
+  --pc-sidebar-color: #616161;
+  --pc-sidebar-color-rgb: 57, 70, 95;
+  --pc-sidebar-submenu-border-color: var(--bs-gray-300);
+  --pc-sidebar-active-color: #6610f2;
+  --pc-sidebar-active-color-rgb: 102, 16, 242;
+  --pc-sidebar-shadow: none;
+  --pc-sidebar-caption-color: #212121;
+  --pc-sidebar-border: none;
+  --pc-header-background: #fff;
+  --pc-header-color: #616161;
+  --pc-header-shadow: none;
+  --pc-card-box-shadow: none;
+  --pc-header-submenu-background: #ffffff;
+  --pc-header-submenu-color: #111936;
+}
+
+[data-pc-sidebar-theme=dark] {
+  --pc-sidebar-background: #1D2630;
+  --pc-sidebar-color: #FFFFFF;
+  --pc-sidebar-color-rgb: 255, 255, 255;
+  --pc-sidebar-submenu-border-color: var(--bs-gray-600);
+  --pc-sidebar-caption-color: #748892;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+.title h2 {
+  font-weight: 600;
+}
+.title h5 {
+  font-weight: 500;
+}
+
+.landing-page {
+  overflow-x: hidden;
+}
+@media (min-width: 1600px) {
+  .landing-page .container {
+    max-width: 1200px;
+  }
+}
+
+.navbar {
+  position: fixed;
+  padding: 16px 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 99;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.navbar.top-nav-collapse {
+  box-shadow: 0 8px 6px -10px rgba(0, 0, 0, 0.5);
+}
+.navbar.default {
+  top: 0;
+  box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.1);
+}
+
+header {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+header h1 {
+  font-size: 64px;
+}
+
+@media (max-width: 991.98px) {
+  header {
+    text-align: center;
+  }
+  header .hero-image {
+    transform: none;
+  }
+  section {
+    padding: 40px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  header {
+    padding: 100px 0 50px;
+  }
+  header h1 {
+    font-size: 30px;
+  }
+}
