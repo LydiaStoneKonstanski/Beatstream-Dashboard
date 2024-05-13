@@ -9,9 +9,9 @@ File: style.css
 =================================================================================== */
 @import url("../fonts/phosphor/duotone/style.css");
 :root {
-  --bs-body-bg: #fff;
+  --bs-body-bg: #333e56;
   --bs-body-bg-rgb: 255, 255, 255;
-  --pc-heading-color: #343a40;
+  --pc-heading-color: #f7aa5e;
   --pc-active-background: #e9ecef;
   --pc-sidebar-background: #fff;
   --pc-sidebar-color: #616161;
@@ -23,7 +23,7 @@ File: style.css
   --pc-sidebar-caption-color: #212121;
   --pc-sidebar-border: none;
   --pc-header-background: #fff;
-  --pc-header-color: #616161;
+  --pc-header-color: #2689E2;
   --pc-header-shadow: none;
   --pc-card-box-shadow: none;
   --pc-header-submenu-background: #ffffff;
@@ -4373,7 +4373,7 @@ textarea.form-control-lg {
 [data-bs-theme=dark] .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-
+/* CARD STYLING*/
 .card {
   --bs-card-spacer-y: 25px;
   --bs-card-spacer-x: 25px;
@@ -4381,7 +4381,7 @@ textarea.form-control-lg {
   --bs-card-title-color: ;
   --bs-card-subtitle-color: ;
   --bs-card-border-width: 0px;
-  --bs-card-border-color: #eeeeee;
+  --bs-card-border-color: #f7aa5e;
   --bs-card-border-radius: 8px;
   --bs-card-box-shadow: none;
   --bs-card-inner-border-radius: calc(8px - 0px);
@@ -4390,8 +4390,9 @@ textarea.form-control-lg {
   --bs-card-cap-bg: transparent;
   --bs-card-cap-color: ;
   --bs-card-height: ;
-  --bs-card-color: ;
-  --bs-card-bg: #ffffff;
+  --bs-card-color: #43a6ae;
+  /*CARD COLOR*/
+  --bs-card-bg: #101936;
   --bs-card-img-overlay-padding: 1.25rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
