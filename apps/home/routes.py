@@ -45,6 +45,10 @@ def icon_tabler():
 def sample_page():
     bar = plot_creator.create_total_model_score_chart()
     return render_template('pages/sample-page.html', plot=bar)
+@blueprint.route('/slide')
+@login_required
+def slide():
+    return render_template('pages/slide.html')
 
 @blueprint.route('/accounts/password-reset/')
 def password_reset():
