@@ -35,20 +35,35 @@
         <div class="col-sm-12">
           <div class="card">
             <div class="card-header">
-              <h5>Hello card</h5>
+<!--              <h5>Hello card</h5>-->
             </div>
             <div class="card-body">
+                <div>
+                <h5>Modeling Methods</h5>
+                    </div>
               <p
-                >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              </p>
+                >The predictive models provide a baseline analytical counterpoint to our similarity testing model.<br><br>
+The first model is random and provides the control score which any intelligent model should exceed.<br><br>
+The second model is a naive recommendation of another song from the listener’s current artist.<br><br>
+The third model uses a network of artist similarities as determined by crowd-sourced surveys to recommend a song from an artist you might like.</p><br>
+
+
               <div class="chart" id="bargraph">
                   <script>
                       var graphs = {{plot | safe}};
                       Plotly.plot('bargraph',graphs,{});
                   </script>
+              </div>
+                <div><br>
+                <h5>Model Scoring</h5>
+                    </div>
+                <p>All models are scored based on the frequency with which a recommended song is interacted overall.
+The high score is awarded for being able to catch a favorite song as early as possible.</p>
+                <p>This same scoring was used on the similarity testing model so the effectiveness can be quantified.
+Each model is scored both for individual users and population as a whole leaving room for an app that could automatically select the best algorithm for each user.
+
+Every time a user chooses a song, all models provide a recommendation  for the next song. Each of these recommendations is given a score for how effective it proves to be over time at predicting their later song choices. These scores can be summed at the individual user level for each model, as well as aggregated to a total score across all users. Model scores can also be tracked over time.
+              </p>
               </div>
             </div>
           </div>
