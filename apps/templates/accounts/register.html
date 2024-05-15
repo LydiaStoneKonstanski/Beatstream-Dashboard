@@ -42,7 +42,7 @@
 
               <hr />
               <h5 class="d-flex justify-content-center"> 
-                <a href="{{ url_for('authentication_blueprint.login') }}" class="btn btn-secondary p-2">Sign IN</a>
+                <a style="color: #86c5c9;" href="{{ url_for('authentication_blueprint.login') }}" class="btn btn-secondary p-2">Sign IN</a>
               </h5>              
 
             {% else %}
@@ -70,17 +70,17 @@
                 <div class="form-check mt-3s">
                   <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="" />
                   <label class="form-check-label" for="customCheckc1">
-                    <h5>Agree with <span>Terms & Condition.</span></h5>
+                    <h5>style="color: #86c5c9;" Agree with <span>Terms & Condition.</span></h5>
                   </label>
                 </div>
                 <div class="d-grid mt-4">
-                  <button type="submit" name="register" class="btn btn-secondary p-2">Sign Up</button>
+                  <button style="color: #86c5c9;" type="submit" name="register" class="btn btn-secondary p-2">Sign Up</button>
                 </div>
               </form>
 
               <hr />
-              <h5 class="d-flex justify-content-center">Already have an account? 
-                <a class="ms-2" href="{{ url_for('authentication_blueprint.login') }}">Login</a>
+              <h5 style="color: #86c5c9;" class="d-flex justify-content-center">Already have an account?
+                <a style="color: #86c5c9;" class="ms-2" href="{{ url_for('authentication_blueprint.login') }}">Login</a>
               </h5>
 
             {% endif %} 
