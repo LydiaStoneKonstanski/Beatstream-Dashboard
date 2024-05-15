@@ -9,8 +9,8 @@ from ..connections.beatstream_connection import BeatstreamConnection, User, Reco
 
 api = Api(blueprint)
 
-beatstream_connection = BeatstreamConnection()
-beatstream_session = beatstream_connection.new_session()
+#beatstream_connection = BeatstreamConnection()
+#beatstream_session = beatstream_connection.new_session()
 
 
 @api.route("/graphdata")
