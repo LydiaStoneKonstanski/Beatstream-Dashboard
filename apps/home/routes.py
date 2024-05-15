@@ -40,6 +40,10 @@ def color():
 def icon_tabler():
     return render_template('pages/icon-tabler.html')
 
+@blueprint.route('/neobackground')
+def neobackground():
+    return render_template('images/neobackground.png')
+
 @blueprint.route('/sample-page')
 @login_required
 def sample_page():
