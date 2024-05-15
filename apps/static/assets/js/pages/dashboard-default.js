@@ -92,7 +92,7 @@ function floatchart() {
       dataLabels: {
         enabled: false
       },
-      colors: ['#2196f3', '#673ab7'],
+      colors: ['#2196f3', '#aad7da'],
       series: data['series'],
       responsive: [
         {
