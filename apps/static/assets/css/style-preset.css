@@ -59,6 +59,12 @@ body {
   --bs-link-hover-color-rgb: to-rgb(shift-color($pc-secondary, $link-shade-percentage));
   --dt-row-selected: 33, 150, 243;
 
+  .nbg {
+   display: inline-block;
+   padding left: 20px;
+   background-image: url("apps/static/assets/images/neobackground.png");
+   background position: left center;
+}
   /*MAIN CARD BODY COLOR*/
   --bs-body-bg: #333e56;
 }

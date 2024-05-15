@@ -12,7 +12,7 @@ File: style.css
   --bs-body-bg: #333e56;
   --bs-body-bg-rgb: 255, 255, 255;
   --pc-heading-color: #43a6ae;
-  --pc-active-background: #e9ecef;
+  --pc-active-background: #f7aa5e;
   --pc-sidebar-background: #fff;
   --pc-sidebar-color: #616161;
   --pc-sidebar-color-rgb: 57, 70, 95;
@@ -13568,8 +13568,9 @@ textarea.form-control-lg {
 }
 
 .bg-light-primary {
-  background: #d4e7f9;
-  color: #aad7da;
+  /*background: url("static/assets/images/neobackground.png");*/
+  /*
+  color: #aad7da;*/
 }
 
 .icon-svg-primary {
@@ -22130,7 +22131,7 @@ select.form-control[data-multiselectsplitter-firstselect-selector], select.form-
   display: flex;
   align-items: center;
   position: relative;
-  background: #d4e7f9;
+  background: bs-body-custom-bg;
 }
 @media (max-width: 991.98px) {
   .auth-main .auth-wrapper.v2 .auth-sidecontent {
@@ -22286,6 +22287,7 @@ select.form-control[data-multiselectsplitter-firstselect-selector], select.form-
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: url("apps/static/assets/images/neobackground.png");
 }
 
 @keyframes wings {

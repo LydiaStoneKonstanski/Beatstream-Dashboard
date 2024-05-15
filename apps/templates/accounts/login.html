@@ -6,6 +6,8 @@
   <div class="auth-main">
     <div class="auth-wrapper v3">
       <div class="auth-form">
+        <a href="{{ url_for('home_blueprint.neobackground') }}" class="nbg"/>
+        </a>
         <div class="card my-5">
           <div class="card-body">
             <a href="#" class="d-flex justify-content-center">
@@ -48,8 +50,8 @@
                   <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="" />
                   <label class="form-check-label text-muted" for="customCheckc1">Remember me</label>
                 </div>
-                <h5 style="color: #aad7da;" class="text-secondary">
-                  <a href="{{ url_for('home_blueprint.password_reset') }}">Forgot Password?</a>
+                <h5 class="text-secondary">
+                  <a style="color: #f7aa5e;" href="{{ url_for('home_blueprint.password_reset') }}">Forgot Password?</a>
                 </h5>
               </div>
               <div class="d-grid mt-4">
@@ -58,7 +60,7 @@
             </form>
             <hr />
             <h5 class="d-flex justify-content-center">Don't have an account?
-              <a class="ms-2" href="{{ url_for('authentication_blueprint.register') }}">Register</a>
+              <a style="color: #f7aa5e;" class="ms-2" href="{{ url_for('authentication_blueprint.register') }}">Register</a>
             </h5>
           </div>
         </div>
